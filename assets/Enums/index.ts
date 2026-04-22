@@ -1,0 +1,154 @@
+// 瓦片类型枚举，用于标识不同类型的地图瓦片，方便后续逻辑区分和渲染
+export enum TILE_TYPE_ENUM {
+  WALL_ROW = 'WALL_ROW',
+  WALL_COLUMN = 'WALL_COLUMN',
+  WALL_LEFT_TOP = 'WALL_LEFT_TOP',
+  WALL_LEFT_BOTTOM = 'WALL_LEFT_BOTTOM',
+  WALL_RIGHT_TOP = 'WALL_RIGHT_TOP',
+  WALL_RIGHT_BOTTOM = 'WALL_RIGHT_BOTTOM',
+  CLIFF_CENTER = 'CLIFF_CENTER',
+  CLIFF_LEFT = 'CLIFF_LEFT',
+  CLIFF_RIGHT = 'CLIFF_RIGHT',
+  FLOOR = 'FLOOR',
+}
+
+// 全局事件枚举，标识游戏内的全局事件，用于事件订阅/发布
+export enum EVENT_ENUM {
+  NEXT_LEVEL = 'NEXT_LEVEL',
+  PLAYER_CTRL = 'PLAYER_CTRL',
+  PLAYER_MOVE_END = 'PLAYER_MOVE_END',
+  PLAYER_BORN = 'PLAYER_BORN',
+  ATTACK_PLAYER = 'ATTACK_PLAYER',
+  ATTACK_EMEMY = 'ATTACK_EMEMY',
+  DOOR_OPEN = 'DOOR_OPEN',
+  SHOW_SMOKE = 'SHOW_SMOKE',
+  SCREEN_SHAKE = 'SCREEN_SHAKE',
+  RECORD_STEP = 'RECORD_STEP',
+  REVOKE_STEP = 'REVOKE_STEP',
+  RESTART_LEVEL = 'RESTART_LEVEL',
+  EXIT_BATTLE = 'EXIT_BATTLE',
+}
+
+// 控制器枚举，标识玩家输入的控制指令
+export enum CONTROLLER_ENUM {
+  TOP = 'TOP',
+  BOTTOM = 'BOTTOM',
+  LEFT = 'LEFT',
+  RIGHT = 'RIGHT',
+  TURNLEFT = 'TURNLEFT',
+  TURNRIGHT = 'TURNRIGHT',
+}
+
+// 状态机变量类型枚举，标识状态机变量的类型
+export enum FSM_PARAMS_TYPE_ENUM {
+  NUMBER = 'NUMBER',
+  TRIGGER = 'TRIGGER',
+}
+
+// 状态机名称枚举，标识状态机的名称
+export enum PARAMS_NAME_ENUM {
+  IDLE = 'IDLE',
+  ATTACK = 'ATTACK',
+  TURNLEFT = 'TURNLEFT',
+  TURNRIGHT = 'TURNRIGHT',
+  BLOCKFRONT = 'BLOCKFRONT',
+  BLOCKBACK = 'BLOCKBACK',
+  BLOCKLEFT = 'BLOCKLEFT',
+  BLOCKRIGHT = 'BLOCKRIGHT',
+  BLOCKTURNLEFT = 'BLOCKTURNLEFT',
+  BLOCKTURNRIGHT = 'BLOCKTURNRIGHT',
+  DEATH = 'DEATH',
+  AIRDEATH = 'AIRDEATH',
+  DIRECTION = 'DIRECTION',
+  SPIKES_TOTAL_COUNT = 'SPIKES_TOTAL_COUNT',
+  SPIKES_CUR_COUNT = 'SPIKES_CUR_COUNT',
+}
+
+// 实体状态枚举：标识实体的状态
+export enum ENTITY_STATE_ENUM {
+  IDLE = 'IDLE',
+  ATTACK = 'ATTACK',
+  TURNLEFT = 'TURNLEFT',
+  TURNRIGHT = 'TURNRIGHT',
+  BLOCKFRONT = 'BLOCKFRONT',
+  BLOCKBACK = 'BLOCKBACK',
+  BLOCKLEFT = 'BLOCKLEFT',
+  BLOCKRIGHT = 'BLOCKRIGHT',
+  BLOCKTURNLEFT = 'BLOCKTURNLEFT',
+  BLOCKTURNRIGHT = 'BLOCKTURNRIGHT',
+  DEATH = 'DEATH',
+  AIRDEATH = 'AIRDEATH',
+}
+
+// 方向枚举：标识实体的朝向
+export enum DIRECTION_ENUM {
+  TOP = 'TOP',
+  BOTTOM = 'BOTTOM',
+  LEFT = 'LEFT',
+  RIGHT = 'RIGHT',
+}
+
+// 方向枚举：将方向转换为数字
+export enum DIRECTION_ORDER_ENUM {
+  TOP = 0,
+  BOTTOM = 1,
+  LEFT = 2,
+  RIGHT = 3,
+}
+
+//实体类型枚举：表示实体的类型
+export enum ENTITY_TYPE_ENUM {
+  PLAYER = 'PLAYER',
+  SKELETON_WOODEN = 'SKELETON_WOODEN',
+  SKELETON_IRON = 'SKELETON_IRON',
+  BURST = 'BURST',
+  DOOR = 'DOOR',
+  SPIKES_ONE = 'SPIKES_ONE',
+  SPIKES_TWO = 'SPIKES_TWO',
+  SPIKES_THREE = 'SPIKES_THREE',
+  SPIKES_FOUR = 'SPIKES_FOUR',
+  SMOKE = 'SMOKE',
+}
+
+// 地刺类型映射总状态数枚举：定义不同类型地刺对应的状态总数
+export enum SPIKES_TYPE_MAP_TOTAL_COUNT_ENUM {
+  SPIKES_ONE = 2,
+  SPIKES_TWO = 3,
+  SPIKES_THREE = 4,
+  SPIKES_FOUR = 5,
+}
+
+// 地刺数量枚举：表示地刺当前伸出的刺数量（字符串形式）
+export enum SPIKE_COUNT_ENUM {
+  ZERO = 'ZERO',
+  ONE = 'ONE',
+  TWO = 'TWO',
+  THREE = 'THREE',
+  FOUR = 'FOUR',
+  FIVE = 'FIVE',
+}
+
+// 地刺数量映射数值枚举：将地刺数量字符串映射为对应的数值
+export enum SPIKE_COUNT_MAP_NUMBER_ENUM {
+  ZERO = 0,
+  ONE = 1,
+  TWO = 2,
+  THREE = 3,
+  FOUR = 4,
+  FIVE = 5,
+}
+
+// 震动方向枚举
+export enum SHAKE_TYPE_ENUM {
+  TOP = 'TOP',
+  BOTTOM = 'BOTTOM',
+  LEFT = 'LEFT',
+  RIGHT = 'RIGHT',
+}
+
+// 场景枚举：标识游戏中的不同场景
+export enum SCENE_ENUM {
+  LOADING = 'Loading',
+  START = 'Start',
+  BATTLE = 'Battle',
+}
